@@ -1,5 +1,6 @@
  let column1Sum = 0;
     let column2Sum = 0;
+      let column3Sum = 0;
     function column1(){ //Adds up all of column1
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
@@ -32,8 +33,20 @@
 
     }
     function column3(){
+      let G1D = document.getElementById("G1dif").value;
+      let G2D = document.getElementById("G2dif").value;
+      let G3D = document.getElementById("G3dif").value;
+      let G4D = document.getElementById("G4dif").value;
+      let G5D = document.getElementById("G5dif").value;
+      let G6D = document.getElementById("G6dif").value;
+      let G7D = document.getElementById("G7dif").value;
+      let H1D = document.getElementById("H1dif").value;
+      let H2D = document.getElementById("H2dif").value;
+      let H3D = document.getElementById("H3dif").value;
+      let H4D = document.getElementById("H4dif").value;
+    column3Sum= (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
+      document.getElementById("columnThree").value=column3Sum;
 
-      document.getElementById("columnThree").value="hello";
     }
     function subtotal(){
         document.getElementById("subtotal").value="hello";
