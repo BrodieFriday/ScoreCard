@@ -3,7 +3,7 @@
  let column3Sum = 0;
  let subtotalSum = 0;
  let finalSum = 0;
-    function column1(){ //Adds up all of column1
+    function column1(){ //Adds up all of column1 (left antler)
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
       let G3L = document.getElementById("G3Left").value;
@@ -18,7 +18,7 @@
     column1Sum= (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
     document.getElementById("columnOne").value=column1Sum;
     }
-    function column2(){ //Adds up all of column2
+    function column2(){ //Adds up all of column2 (right antler)
       let G1R = document.getElementById("G1Right").value;
       let G2R = document.getElementById("G2Right").value;
       let G3R = document.getElementById("G3Right").value;
@@ -34,7 +34,7 @@
       document.getElementById("columnTwo").value=column2Sum;
 
     }
-    function column3(){
+    function column3(){ //Adds up column 3 (difference)
       let G1D = document.getElementById("G1dif").value;
       let G2D = document.getElementById("G2dif").value;
       let G3D = document.getElementById("G3dif").value;
@@ -49,24 +49,12 @@
     column3Sum= (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
      document.getElementById("columnThree").value=column3Sum;
     }
-    function subtotal(){
+    function subtotal(){  //Adds up spreadCredit , column1 , and column2
       let spreadCredit = document.getElementById("spreadCredit").value;
       subtotalSum = (+spreadCredit) +(+column1Sum) + (+column2Sum);
       document.getElementById("subtotal").value= subtotalSum;
     }
-    function final(){
+    function final(){  //Subtracts column3 from subtotal
       finalSum = subtotalSum - column3Sum;
       document.getElementById("finalScore").value=finalSum;
     }
-
-
-   /* $(document).ready(function(){
-      $(":Button").click(function(){
-       // $("div").css("background-color","green");
-       // $("p").css({"font-size":"+40px"});
-        var G1L = document.getElementById('G1Left').value;
-        var G1R = document.getElementById('G1Right').value;
-        var product = parseInt(G1L) + parseInt(G1R); 
-        document.getElementById("add").value=product;
-  })
-}*/
