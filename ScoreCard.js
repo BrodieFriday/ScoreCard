@@ -2,6 +2,7 @@
  let column2Sum = 0;
  let column3Sum = 0;
  let subtotalSum = 0;
+ let finalSum = 0;
     function column1(){ //Adds up all of column1
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
@@ -48,16 +49,15 @@
     column3Sum= (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
      document.getElementById("columnThree").value=column3Sum;
     }
-    function final(){
-      document.getElementById("finalScore").value="hello";
-    }
-    
     function subtotal(){
       let spreadCredit = document.getElementById("spreadCredit").value;
       subtotalSum = (+spreadCredit) +(+column1Sum) + (+column2Sum);
       document.getElementById("subtotal").value= subtotalSum;
     }
-
+    function final(){
+      finalSum = subtotalSum - column3Sum;
+      document.getElementById("finalScore").value=finalSum;
+    }
 
 
    /* $(document).ready(function(){
