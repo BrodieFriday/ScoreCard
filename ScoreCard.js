@@ -1,6 +1,6 @@
  let column1Sum = 0;
     let column2Sum = 0;
-    function column1(){
+    function column1(){ //Adds up all of column1
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
       let G3L = document.getElementById("G3Left").value;
@@ -15,7 +15,7 @@
     column1Sum= (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
     document.getElementById("columnOne").value=column1Sum;
     }
-    function column2(){
+    function column2(){ //Adds up all of column2
       let G1R = document.getElementById("G1Right").value;
       let G2R = document.getElementById("G2Right").value;
       let G3R = document.getElementById("G3Right").value;
