@@ -41,8 +41,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
         }
+        .key{
+          font-size: 19px;
+          margin: 0;
+    position: absolute;
+        top: 88%;
+      left: 6%;
+      transform: translate(-50%, -50%);
+        }
         .lowerhalf{
-                 font-size: 19px;
+              font-size: 19px;
           margin: 0;
     position: absolute;
         top: 90%;
