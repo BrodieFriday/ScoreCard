@@ -58,3 +58,41 @@
       finalSum = subtotalSum - column3Sum;
       document.getElementById("finalScore").value=finalSum;
     }
+    function reset(){
+      document.getElementById("G1Left").value = " ";
+      document.getElementById("G2Left").value = " ";
+      document.getElementById("G3Left").value = " ";
+      document.getElementById("G4Left").value = " ";
+      document.getElementById("G5Left").value = " ";
+      document.getElementById("G6Left").value = " ";
+      document.getElementById("G7Left").value = " ";
+      document.getElementById("H1Left").value = " ";
+      document.getElementById("H2Left").value = " ";
+      document.getElementById("H3Left").value = " ";
+      document.getElementById("H4Left").value = " ";
+
+      document.getElementById("G1Right").value = " ";
+      document.getElementById("G2Right").value = " ";
+      document.getElementById("G3Right").value = " ";
+      document.getElementById("G4Right").value = " ";
+      document.getElementById("G5Right").value = " ";
+      document.getElementById("G6Right").value = " ";
+      document.getElementById("G7Right").value = " ";
+      document.getElementById("H1Right").value = " ";
+      document.getElementById("H2Right").value = " ";
+      document.getElementById("H3Right").value = " ";
+      document.getElementById("H4Right").value = " ";
+
+
+      document.getElementById("G1dif").value = " ";
+      document.getElementById("G2dif").value = " ";
+      document.getElementById("G3dif").value = " ";
+      document.getElementById("G4dif").value = " ";
+      document.getElementById("G5dif").value = " ";
+      document.getElementById("G6dif").value = " ";
+      document.getElementById("G7dif").value = " ";
+      document.getElementById("H1dif").value = " ";
+      document.getElementById("H2dif").value = " ";
+      document.getElementById("H3dif").value = " ";
+      document.getElementById("H4dif").value = " ";
+    }
