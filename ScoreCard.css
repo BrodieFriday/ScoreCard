@@ -1,72 +1,72 @@
   html{
           zoom: .8;
-        }
-        p {text-align: center; font-family:arial; color:black;}
+  }
+  p {text-align: center; font-family:arial; color:black;}
         
 
-        li{
-          display: inline;
-          padding: 5px;
-          background-color: lawngreen;
-        }
-        .calculate{
-          background-color: slategrey;
+  li{
+      display: inline;
+      padding: 5px;
+      background-color: lawngreen;
+  }
+  .calculate{
+      background-color: slategrey;
 
-        }
-        .menubar{
-          overflow: hidden;
-          background-color:  #432;
-        }
-        .menubar a{
-          float:  left;
-          color: yellow;
-          text-align: right;
-          padding: 14px 16px;
-          text-decoration: none;
-          font-size:  17px;
-        }
-        .menubar a:hover{
-            background-color: white;
-            color: orange;
-        }
-        .menubar a.active{
-          background-color: teal;
-          color: black;
-        }
-        .center{
-          font-size: 20px;
-          margin: 0;
-    position: absolute;
-        top: 45%;
+  }
+  .menubar{
+      overflow: hidden;
+      background-color:  #432;
+  }
+  .menubar a{
+      float:  left;
+      color: yellow;
+      text-align: right;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size:  17px;
+  }
+  .menubar a:hover{
+      background-color: white;
+      color: orange;
+  }
+  .menubar a.active{
+      background-color: teal;
+      color: black;
+  }
+  .center{
+      font-size: 20px;
+      margin: 0;
+      position: absolute;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -50%);
-        }
-        .key{
-          font-size: 19px;
-          margin: 0;
-    position: absolute;
-        top: 88%;
+  }
+  .key{
+      font-size: 19px;
+      margin: 0;
+      position: absolute;
+      top: 88%;
       left: 6%;
       transform: translate(-50%, -50%);
-        }
-        .lowerhalf{
-              font-size: 19px;
-          margin: 0;
-    position: absolute;
-        top: 90%;
+  }
+  .lowerhalf{
+      font-size: 19px;
+      margin: 0;
+      position: absolute;
+      top: 90%;
       left: 50%;
       transform: translate(-50%, -50%);
-        }
-        .lowheader{
-          font-size: 19px;
-          margin: 0;
-          position: absolute;
-          top: 76%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-        .button{
-          padding: 143px 20px;
-          height: 236px;
-          width: 100px;
-        }
+  }
+  .lowheader{
+      font-size: 19px;
+      margin: 0;
+      position: absolute;
+      top: 76%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .button{
+      padding: 143px 20px;
+      height: 236px;
+      width: 100px;
+  }
