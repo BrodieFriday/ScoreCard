@@ -1,5 +1,6 @@
   html{
           zoom: .8;
+          background-color: whitesmoke;
   }
   p {text-align: center; font-family:arial; color:black;}
         
@@ -65,8 +66,4 @@
       left: 50%;
       transform: translate(-50%, -50%);
   }
-  .button{
-      padding: 143px 20px;
-      height: 236px;
-      width: 100px;
-  }
+ 
