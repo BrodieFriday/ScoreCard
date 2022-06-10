@@ -4,6 +4,7 @@
  let subtotalSum = 0;
  let finalSum = 0;
     function column1(){ //Adds up all of column1 (left antler)
+      let MBL = document.getElementById("mainBeamLeft").value;
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
       let G3L = document.getElementById("G3Left").value;
@@ -15,10 +16,11 @@
       let H2L = document.getElementById("H2Left").value;
       let H3L = document.getElementById("H3Left").value;
       let H4L = document.getElementById("H4Left").value;
-    column1Sum= (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
+    column1Sum= (+MBL) + (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
     document.getElementById("columnOne").value=column1Sum;
     }
     function column2(){ //Adds up all of column2 (right antler)
+      let MBR = document.getElementById("mainBeamRight").value;
       let G1R = document.getElementById("G1Right").value;
       let G2R = document.getElementById("G2Right").value;
       let G3R = document.getElementById("G3Right").value;
@@ -30,11 +32,12 @@
       let H2R = document.getElementById("H2Right").value;
       let H3R = document.getElementById("H3Right").value;
       let H4R = document.getElementById("H4Right").value;
-    column2Sum= (+G1R) + (+G2R) + (+G3R) + (+G4R) + (+G5R) + (+G6R) + (+G7R) + (+H1R) + (+H2R) + (+H3R) + (+H4R);
+    column2Sum= (+MBR) + (+G1R) + (+G2R) + (+G3R) + (+G4R) + (+G5R) + (+G6R) + (+G7R) + (+H1R) + (+H2R) + (+H3R) + (+H4R);
       document.getElementById("columnTwo").value=column2Sum;
 
     }
     function column3(){ //Adds up column 3 (difference)
+      let MBD = document.getElementById("mainBeamDif").value;
       let G1D = document.getElementById("G1dif").value;
       let G2D = document.getElementById("G2dif").value;
       let G3D = document.getElementById("G3dif").value;
@@ -46,7 +49,7 @@
       let H2D = document.getElementById("H2dif").value;
       let H3D = document.getElementById("H3dif").value;
       let H4D = document.getElementById("H4dif").value;
-    column3Sum= (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
+    column3Sum= (+MBD) + (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
      document.getElementById("columnThree").value=column3Sum;
     }
     function subtotal(){  //Adds up spreadCredit , column1 , and column2
@@ -59,6 +62,7 @@
       document.getElementById("finalScore").value=finalSum;
     }
     function reset(){
+      document.getElementById("mainBeamLeft").value = " ";
       document.getElementById("G1Left").value = " ";
       document.getElementById("G2Left").value = " ";
       document.getElementById("G3Left").value = " ";
@@ -71,6 +75,7 @@
       document.getElementById("H3Left").value = " ";
       document.getElementById("H4Left").value = " ";
 
+      document.getElementById("mainBeamRight").value = " ";
       document.getElementById("G1Right").value = " ";
       document.getElementById("G2Right").value = " ";
       document.getElementById("G3Right").value = " ";
@@ -83,7 +88,7 @@
       document.getElementById("H3Right").value = " ";
       document.getElementById("H4Right").value = " ";
 
-
+      document.getElementById("mainBeamDif").value = " ";
       document.getElementById("G1dif").value = " ";
       document.getElementById("G2dif").value = " ";
       document.getElementById("G3dif").value = " ";
