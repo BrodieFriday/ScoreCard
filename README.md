@@ -21,3 +21,6 @@ Scoring whitetail antlers is done in 8ths of an inch. Inorder to provide a bette
  Inorder for a point to be scoreable it has to be at least one inch. Not every antler will have a G1 through G7, in the case it is not there you will leave that box blank.
 
  The G1 is located at the base of the antler and then the G2 would be the next point on the main beam and so on.
+ 
+ ## License
+ [MIT](https://choosealicense.com/licenses/mit/)
