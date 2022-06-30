@@ -16,7 +16,7 @@ p {text-align: center; font-family:arial; color:black;}
       left: 50%;
       transform: translate(-50%, -50%);
   }
-.key{
+.conversion_key{
       font-size: 19px;
       margin: 0;
       position: absolute;

@@ -3,7 +3,20 @@
  let column3Sum = 0;
  let subtotalSum = 0;
  let finalSum = 0;
-    function column1(){ //Adds up all of column1 (left antler)
+ 
+    function conversion() {
+      document.getElementByClassName("cell").value = "food";
+      /*if(oneEighth = " "){
+        var i;
+        while(i < oneEighth.length){
+          oneEighth[i].value='cat';
+          i++;
+        }
+      }*/
+  
+   }
+ 
+    function column1() { //Adds up all of column1 (left antler)
       let MBL = document.getElementById("mainBeamLeft").value;
       let G1L = document.getElementById("G1Left").value;
       let G2L = document.getElementById("G2Left").value;
@@ -19,7 +32,7 @@
     column1Sum= (+MBL) + (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
     document.getElementById("columnOne").value=column1Sum;
     }
-    function column2(){ //Adds up all of column2 (right antler)
+    function column2() { //Adds up all of column2 (right antler)
       let MBR = document.getElementById("mainBeamRight").value;
       let G1R = document.getElementById("G1Right").value;
       let G2R = document.getElementById("G2Right").value;
@@ -36,7 +49,7 @@
       document.getElementById("columnTwo").value=column2Sum;
 
     }
-    function column3(){ //Adds up column 3 (difference)
+    function column3() { //Adds up column 3 (difference)
       let MBD = document.getElementById("mainBeamDif").value;
       let G1D = document.getElementById("G1dif").value;
       let G2D = document.getElementById("G2dif").value;
@@ -52,17 +65,23 @@
     column3Sum= (+MBD) + (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
      document.getElementById("columnThree").value=column3Sum;
     }
-    function subtotal(){  //Adds up spreadCredit , column1 , and column2
+    function subtotal() {  //Adds up spreadCredit , column1 , and column2
       let spreadCredit = document.getElementById("spreadCredit").value;
       subtotalSum = (+spreadCredit) +(+column1Sum) + (+column2Sum);
       document.getElementById("subtotal").value= subtotalSum;
     }
-    function final(){  //Subtracts column3 from subtotal
+    function final() {  //Subtracts column3 from subtotal
       finalSum = subtotalSum - column3Sum;
       document.getElementById("finalScore").value=finalSum;
     }
-    function reset(){
+    function reset() { //Clears all textboxes
+      document.getElementById("finalScore").value = " ";
+      document.getElementById("subtotal").value = " ";
+      document.getElementById("columnThree").value = " ";
+      document.getElementById("columnTwo").value = " ";
+      document.getElementById("columnOne").value = " ";
       document.getElementById("mainBeamLeft").value = " ";
+
       document.getElementById("G1Left").value = " ";
       document.getElementById("G2Left").value = " ";
       document.getElementById("G3Left").value = " ";
