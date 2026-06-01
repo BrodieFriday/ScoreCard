@@ -1,159 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Score Card</title>
-
-   <link rel="stylesheet" type="text/css" href="ScoreCard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitetail Scorecard • Boone & Crockett Style</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-<p style = "font-size: 45px">Unoffical Scoring Card for North American Whitetial (Typical)</p>
+    <div class="container">
+        <header>
+            <h1>Whitetail Antler Scorecard</h1>
+            <p>Unofficial Boone & Crockett Typical Whitetail Calculator</p>
+        </header>
 
-<div style="width:825px">
-  
-<table class="center"style="width: 850px">
- <tr>
-    <td></td>
-    <td>Left Antler</td>
-    <td>Right Antler</td>
-    <td>Difference</td>
-  </tr>
-  <tr>
-    <td>Length of Main Beam</td>
-    <td><Input class="cell" Type="text" id="mainBeamLeft" Name="mainBeamLeft" value=" "></td>
-    <td><Input class="cell" Type="text" id="mainBeamRight" Name="mainBeamRight" value=" "></td>
-    <td><Input class="cell" Type="text" id="mainBeamDif" Name="mainBeamDif" value=" "></td>
-  </tr>
-  <tr>
-    <td>G1 (Length of First Point)</td>
-    <td><Input class="cell" Type="text" id="G1Left" Name="G1Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G1Right" Name="G1Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G1dif" Name="G1dif" value=" "></td>
-  </tr>
- <tr>
-    <td width=100%>G2 (Length of Second Point)</td>
-    <td><Input class="cell" Type="text" id="G2Left" Name="G2Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G2Right" Name="G2Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G2dif" Name="G2dif" value=" "></td>
-  </tr>
-  <tr>
-    <td>G3 (Length of Third Point)</td>
-    <td><Input class="cell" Type="text" id="G3Left" Name="G3Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G3Right" Name="G3Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G3dif" Name="G3dif" value=" "></td>
-  </tr>
-  <tr>
-    <td>G4 (Length of Fourth Point)</td>
-    <td><Input class="cell" Type="text" id="G4Left" Name="G4Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G4Right" Name="G4Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G4dif" Name="G4dif" value=" "></td>
-  </tr>
-   <tr>
-    <td>G5 (Length of Fifth Point)</td>
-    <td><Input class="cell" Type="text" id="G5Left" Name="G5Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G5Right" Name="G5Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G5dif" Name="G5dif" value=" "></td>
-  </tr>
-   <tr>
-    <td>G6 (Length of Sixth Point)</td>
-    <td><Input class="cell" Type="text" id="G6Left" Name="G6Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G6Right" Name="G6Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G6dif" Name="G6dif" value=" "></td>
-  </tr>
-   <tr>
-    <td>G7 (Length of Seventh Point)</td>
-    <td><Input class="cell" Type="text" id="G7Left" Name="G7Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="G7Right" Name="G7Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="G7dif" Name="G7dif" value=" "></td>
-  </tr>
-   <tr>
-    <td>H1 (Circumference at Smallest Place Between Burr and First Point)</td>
-    <td><Input class="cell" Type="text" id="H1Left" Name="H1Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="H1Right" Name="H1Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="H1dif" Name="H1dif" value=" "></td>
-  </tr>
-  <tr>
-    <td>H2 (Circumference at Smallest Place Between First and Second Points)</td>
-    <td><Input class="cell" Type="text" id="H2Left" Name="H2Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="H2Right" Name="H2Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="H2dif" Name="H2dif" value=" "></td>
-  </tr>
-  <tr>
-    <td>H3 (Circumference at Smallest Place Between Second and Thrid Points)</td>
-    <td><Input class="cell" Type="text" id="H3Left" Name="H3Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="H3Right" Name="H3Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="H3dif" Name="H3dif" value=" "></td>
-  </tr>
-  <tr>
-    <td>H4 (Circumference at Smallest Place Between Third and Fourth Points)</td>
-    <td><Input class="cell" Type="text" id="H4Left" Name="H4Left" value=" "></td>
-    <td><Input class="cell" Type="text" id="H4Right" Name="H4Right" value=" "></td>
-    <td><Input class="cell" Type="text" id="H4dif" Name="H4dif" value=" "></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td width="200px"><Input Type="button" id="reset" Name="reset" value="reset" onclick="reset()"></td>
-  </tr>
-</table>
-</div>
-<div>
-  <table class="conversion_key">
-    <th>Conversion Key</th>
-      <tr>
-        <td>1/8  =  0.125</td>
-      </tr>
-      <tr>
-        <td>2/8  =  0.25</td>
-      </tr>
-      <tr>
-        <td>3/8  =  0.375</td>
-      </tr>
-      <tr>
-        <td>4/8  =  0.5</td>
-      </tr>
-      <tr>
-        <td>5/8  =  0.625</td>
-      </tr>
-      <tr>
-        <td>6/8  =  0.75</td>
-      </tr>
-      <tr>
-        <td>7/8  =  0.875</td>
-      </tr>
-  </table>
-</div>
-<div>
-  <p class="lowheader" style = "font-size: 30px">Calculate Your Score!</p>
-  <table class="lowerhalf" style="width: 325px">
-  <tr>
-    <td>Spread Credit</td>
-    <td><Input style="width:60px;"Type="text" id="spreadCredit" Name="spreadCreditText" value=" "></td>
-  </tr>
-  <tr>
-    <td>Column 1</td>
-    <td><Input style="width:60px;"Type="text" id="columnOne" Name="columnOneText" value=" "></td>
-    <td width="200px"><Input style="width:100px;"Type="button" id="columnOneBt" Name="columnOneButton" value="Calculate Column 1" onclick="column1()"></td>
-  </tr>
-  <tr>
-    <td width="200%">Column 2</td>
-    <td><Input style="width:60px;"Type="text" id="columnTwo" Name="column2Text" value=" "></td>
-    <td width="200px"><Input style="width:100px;"Type="button" id="columnTwoBt" Name="column2Button" value="Calculate Column 2" onclick="column2()"></td>
-  </tr>
-  <tr>
-    <td width="200px">Subtotal</td>
-    <td width="200px"><Input style="width:60px;"Type="text" id="subtotal" Name="subtotalText" value=" "></td>
-    <td width="200px"><Input style="width:100px;"Type="button" id="subtotalBt" Name="subtotalButton" value="Calculate Subtotal" onclick="subtotal()"></td>
-  </tr>
-  <tr>
-    <td width="200px">Column 3</td>
-    <td width="200px"><Input style="width:60px;"Type="text" id="columnThree" Name="columnThreeText" value=" "></td>
-    <td width="200px"><Input style="width:100px;"Type="button" id="columnThreeBt" Name="columnThreeButton" value="Calculate Column 3" onclick="column3()"></td>
-  </tr>
-  <tr>
-    <td width="200px">FINAL SCORE</td>
-    <td width="200px"><Input style="width:60px;"Type="text" id="finalScore" Name="finalScoreText" value=" "></td>
-    <td width="200px"><Input style="width:120px;"Type="button" id="finalScoreBt" Name="finalScoreButton" value="Calculate FIANL SCORE" onclick="final()"></td>
-  </tr>
-  </div>
-  <script src="ScoreCard.js"></script>
+        <div class="main-grid">
+            <!-- Scoring Table -->
+            <div class="scoring-panel">
+                <table id="score-table">
+                    <thead>
+                        <tr>
+                            <th>Measurement</th>
+                            <th class="left-col">Left Antler</th>
+                            <th class="right-col">Right Antler</th>
+                            <th class="diff-col">Difference</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+                <button id="reset-btn" class="reset-btn">
+                    <i class="fas fa-undo"></i> Reset All
+                </button>
+            </div>
+
+            <!-- Sidebar Calculations -->
+            <div class="calc-panel">
+                <h2>Score Calculations</h2>
+                
+                <div class="input-group">
+                    <label>Spread Credit</label>
+                    <input type="number" id="spreadCredit" step="0.125" placeholder="0.000">
+                </div>
+
+                <div class="calc-row">
+                    <div class="calc-group">
+                        <label>Column 1 (Left)</label>
+                        <input type="number" id="columnOne" readonly>
+                    </div>
+                    <button onclick="calculateColumn1()" class="calc-btn">Calculate Left</button>
+                </div>
+
+                <div class="calc-row">
+                    <div class="calc-group">
+                        <label>Column 2 (Right)</label>
+                        <input type="number" id="columnTwo" readonly>
+                    </div>
+                    <button onclick="calculateColumn2()" class="calc-btn">Calculate Right</button>
+                </div>
+
+                <div class="calc-row">
+                    <div class="calc-group">
+                        <label>Subtotal</label>
+                        <input type="number" id="subtotal" readonly>
+                    </div>
+                    <button onclick="calculateSubtotal()" class="calc-btn">Calc Subtotal</button>
+                </div>
+
+                <div class="calc-row">
+                    <div class="calc-group">
+                        <label>Column 3 (Diff)</label>
+                        <input type="number" id="columnThree" readonly>
+                    </div>
+                    <button onclick="calculateColumn3()" class="calc-btn">Calculate Diff</button>
+                </div>
+
+                <div class="final-score">
+                    <label>FINAL SCORE</label>
+                    <input type="number" id="finalScore" readonly class="final-input">
+                    <button onclick="calculateFinal()" class="final-btn">Calculate Final Score</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversion-key">
+            <h3>Eighths Conversion</h3>
+            <div class="key-grid">
+                <div>1/8 = 0.125</div>
+                <div>2/8 = 0.250</div>
+                <div>3/8 = 0.375</div>
+                <div>4/8 = 0.500</div>
+                <div>5/8 = 0.625</div>
+                <div>6/8 = 0.750</div>
+                <div>7/8 = 0.875</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scorecard.js"></script>
 </body>
 </html>
