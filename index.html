@@ -72,3 +72,33 @@
                 <div class="calc-row">
                     <div class="calc-group">
                         <label>Column 3 — Total Difference</label>
+                        <input type="number" id="columnThree" readonly class="result-input">
+                    </div>
+                    <button onclick="calculateColumn3()" class="calc-btn primary">Calc Diff</button>
+                </div>
+
+                <div class="final-score-box">
+                    <label class="final-label">FINAL NET SCORE</label>
+                    <input type="number" id="finalScore" readonly class="final-input">
+                    <button onclick="calculateFinal()" class="final-btn">Calculate Final Score</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversion-key">
+            <h3>Eighths to Decimal Conversion</h3>
+            <div class="key-grid">
+                <div>1/8 = <strong>0.125</strong></div>
+                <div>2/8 = <strong>0.250</strong></div>
+                <div>3/8 = <strong>0.375</strong></div>
+                <div>4/8 = <strong>0.500</strong></div>
+                <div>5/8 = <strong>0.625</strong></div>
+                <div>6/8 = <strong>0.750</strong></div>
+                <div>7/8 = <strong>0.875</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scorecard.js"></script>
+</body>
+</html>
