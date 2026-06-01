@@ -3,29 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitetail Scorecard • Boone & Crockett</title>
+    <title>Whitetail Antler Scorecard</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-deer"></i>
-                    <span>SCORECARD</span>
-                </div>
-                <h1>Whitetail Antler Scorecard</h1>
-                <p class="subtitle">Official-Style Boone & Crockett Typical Calculator</p>
-            </div>
+            <h1>Whitetail Antler Scorecard</h1>
+            <p class="subtitle">Boone & Crockett Style Typical Calculator</p>
         </header>
 
         <div class="main-grid">
             <!-- Scoring Table -->
             <div class="scoring-panel">
                 <div class="panel-header">
-                    <h2><i class="fas fa-ruler"></i> Measurements</h2>
+                    <h2>Measurements</h2>
                 </div>
                 <table id="score-table">
                     <thead>
@@ -38,15 +31,13 @@
                     </thead>
                     <tbody id="table-body"></tbody>
                 </table>
-                <button id="reset-btn" class="reset-btn">
-                    <i class="fas fa-undo"></i> Reset All Fields
-                </button>
+                <button id="reset-btn" class="reset-btn">Reset All Fields</button>
             </div>
 
             <!-- Sidebar -->
             <div class="calc-panel">
                 <div class="panel-header">
-                    <h2><i class="fas fa-calculator"></i> Calculations</h2>
+                    <h2>Calculations</h2>
                 </div>
                 
                 <div class="input-group">
@@ -81,33 +72,3 @@
                 <div class="calc-row">
                     <div class="calc-group">
                         <label>Column 3 — Total Difference</label>
-                        <input type="number" id="columnThree" readonly class="result-input">
-                    </div>
-                    <button onclick="calculateColumn3()" class="calc-btn primary">Calc Diff</button>
-                </div>
-
-                <div class="final-score-box">
-                    <label class="final-label">FINAL NET SCORE</label>
-                    <input type="number" id="finalScore" readonly class="final-input">
-                    <button onclick="calculateFinal()" class="final-btn">Calculate Final Score</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="conversion-key">
-            <h3><i class="fas fa-info-circle"></i> Eighths to Decimal Conversion</h3>
-            <div class="key-grid">
-                <div>1/8 = <strong>0.125</strong></div>
-                <div>2/8 = <strong>0.250</strong></div>
-                <div>3/8 = <strong>0.375</strong></div>
-                <div>4/8 = <strong>0.500</strong></div>
-                <div>5/8 = <strong>0.625</strong></div>
-                <div>6/8 = <strong>0.750</strong></div>
-                <div>7/8 = <strong>0.875</strong></div>
-            </div>
-        </div>
-    </div>
-
-    <script src="js/scorecard.js"></script>
-</body>
-</html>
