@@ -1,122 +1,94 @@
- let column1Sum = 0;
- let column2Sum = 0;
- let column3Sum = 0;
- let subtotalSum = 0;
- let finalSum = 0;
- 
-    function conversion() {
-      document.getElementByClassName("cell").value = "food";
-      /*if(oneEighth = " "){
-        var i;
-        while(i < oneEighth.length){
-          oneEighth[i].value='cat';
-          i++;
+// scorecard.js - Professional Refactored Version
+
+let column1Sum = 0;
+let column2Sum = 0;
+let column3Sum = 0;
+let subtotalSum = 0;
+let finalSum = 0;
+
+const measurements = [
+    { label: "Length of Main Beam", left: "mainBeamLeft", right: "mainBeamRight", diff: "mainBeamDif" },
+    { label: "G1 (First Point)", left: "G1Left", right: "G1Right", diff: "G1dif" },
+    { label: "G2 (Second Point)", left: "G2Left", right: "G2Right", diff: "G2dif" },
+    { label: "G3 (Third Point)", left: "G3Left", right: "G3Right", diff: "G3dif" },
+    { label: "G4 (Fourth Point)", left: "G4Left", right: "G4Right", diff: "G4dif" },
+    { label: "G5 (Fifth Point)", left: "G5Left", right: "G5Right", diff: "G5dif" },
+    { label: "G6 (Sixth Point)", left: "G6Left", right: "G6Right", diff: "G6dif" },
+    { label: "G7 (Seventh Point)", left: "G7Left", right: "G7Right", diff: "G7dif" },
+    { label: "H1 (Burr to G1)", left: "H1Left", right: "H1Right", diff: "H1dif" },
+    { label: "H2 (G1 to G2)", left: "H2Left", right: "H2Right", diff: "H2dif" },
+    { label: "H3 (G2 to G3)", left: "H3Left", right: "H3Right", diff: "H3dif" },
+    { label: "H4 (G3 to G4)", left: "H4Left", right: "H4Right", diff: "H4dif" }
+];
+
+function renderTable() {
+    const tbody = document.getElementById('table-body');
+    tbody.innerHTML = '';
+
+    measurements.forEach(m => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><strong>${m.label}</strong></td>
+            <td><input type="number" step="0.125" id="${m.left}" class="measurement-input"></td>
+            <td><input type="number" step="0.125" id="${m.right}" class="measurement-input"></td>
+            <td><input type="number" step="0.125" id="${m.diff}" readonly class="diff-input"></td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+// Auto-calculate differences
+function setupAutoDiff() {
+    document.addEventListener('input', (e) => {
+        if (e.target.id.includes('Left') || e.target.id.includes('Right')) {
+            const base = e.target.id.replace('Left', '').replace('Right', '');
+            const leftVal = parseFloat(document.getElementById(base + 'Left')?.value) || 0;
+            const rightVal = parseFloat(document.getElementById(base + 'Right')?.value) || 0;
+            
+            const diffEl = document.getElementById(base + 'Dif') || document.getElementById(base + 'dif');
+            if (diffEl) diffEl.value = Math.abs(leftVal - rightVal).toFixed(3);
         }
-      }*/
-  
-   }
- 
-    function column1() { //Adds up all of column1 (left antler)
-      let MBL = document.getElementById("mainBeamLeft").value;
-      let G1L = document.getElementById("G1Left").value;
-      let G2L = document.getElementById("G2Left").value;
-      let G3L = document.getElementById("G3Left").value;
-      let G4L = document.getElementById("G4Left").value;
-      let G5L = document.getElementById("G5Left").value;
-      let G6L = document.getElementById("G6Left").value;
-      let G7L = document.getElementById("G7Left").value;
-      let H1L = document.getElementById("H1Left").value;
-      let H2L = document.getElementById("H2Left").value;
-      let H3L = document.getElementById("H3Left").value;
-      let H4L = document.getElementById("H4Left").value;
-    column1Sum= (+MBL) + (+G1L) + (+G2L) + (+G3L) + (+G4L) + (+G5L) + (+G6L) + (+G7L) + (+H1L) + (+H2L) + (+H3L) + (+H4L);
-    document.getElementById("columnOne").value=column1Sum;
-    }
-    function column2() { //Adds up all of column2 (right antler)
-      let MBR = document.getElementById("mainBeamRight").value;
-      let G1R = document.getElementById("G1Right").value;
-      let G2R = document.getElementById("G2Right").value;
-      let G3R = document.getElementById("G3Right").value;
-      let G4R = document.getElementById("G4Right").value;
-      let G5R = document.getElementById("G5Right").value;
-      let G6R = document.getElementById("G6Right").value;
-      let G7R = document.getElementById("G7Right").value;
-      let H1R = document.getElementById("H1Right").value;
-      let H2R = document.getElementById("H2Right").value;
-      let H3R = document.getElementById("H3Right").value;
-      let H4R = document.getElementById("H4Right").value;
-    column2Sum= (+MBR) + (+G1R) + (+G2R) + (+G3R) + (+G4R) + (+G5R) + (+G6R) + (+G7R) + (+H1R) + (+H2R) + (+H3R) + (+H4R);
-      document.getElementById("columnTwo").value=column2Sum;
+    });
+}
 
-    }
-    function column3() { //Adds up column 3 (difference)
-      let MBD = document.getElementById("mainBeamDif").value;
-      let G1D = document.getElementById("G1dif").value;
-      let G2D = document.getElementById("G2dif").value;
-      let G3D = document.getElementById("G3dif").value;
-      let G4D = document.getElementById("G4dif").value;
-      let G5D = document.getElementById("G5dif").value;
-      let G6D = document.getElementById("G6dif").value;
-      let G7D = document.getElementById("G7dif").value;
-      let H1D = document.getElementById("H1dif").value;
-      let H2D = document.getElementById("H2dif").value;
-      let H3D = document.getElementById("H3dif").value;
-      let H4D = document.getElementById("H4dif").value;
-    column3Sum= (+MBD) + (+G1D) + (+G2D) + (+G3D) + (+G4D) + (+G5D) + (+G6D) + (+G7D) + (+H1D) + (+H2D) + (+H3D) + (+H4D);
-     document.getElementById("columnThree").value=column3Sum;
-    }
-    function subtotal() {  //Adds up spreadCredit , column1 , and column2
-      let spreadCredit = document.getElementById("spreadCredit").value;
-      subtotalSum = (+spreadCredit) +(+column1Sum) + (+column2Sum);
-      document.getElementById("subtotal").value= subtotalSum;
-    }
-    function final() {  //Subtracts column3 from subtotal
-      finalSum = subtotalSum - column3Sum;
-      document.getElementById("finalScore").value=finalSum;
-    }
-    function reset() { //Clears all textboxes
-      document.getElementById("finalScore").value = " ";
-      document.getElementById("subtotal").value = " ";
-      document.getElementById("columnThree").value = " ";
-      document.getElementById("columnTwo").value = " ";
-      document.getElementById("columnOne").value = " ";
-      document.getElementById("mainBeamLeft").value = " ";
+function calculateColumn1() {
+    const ids = measurements.map(m => m.left);
+    column1Sum = ids.reduce((sum, id) => sum + (parseFloat(document.getElementById(id)?.value) || 0), 0);
+    document.getElementById('columnOne').value = column1Sum.toFixed(3);
+}
 
-      document.getElementById("G1Left").value = " ";
-      document.getElementById("G2Left").value = " ";
-      document.getElementById("G3Left").value = " ";
-      document.getElementById("G4Left").value = " ";
-      document.getElementById("G5Left").value = " ";
-      document.getElementById("G6Left").value = " ";
-      document.getElementById("G7Left").value = " ";
-      document.getElementById("H1Left").value = " ";
-      document.getElementById("H2Left").value = " ";
-      document.getElementById("H3Left").value = " ";
-      document.getElementById("H4Left").value = " ";
+function calculateColumn2() {
+    const ids = measurements.map(m => m.right);
+    column2Sum = ids.reduce((sum, id) => sum + (parseFloat(document.getElementById(id)?.value) || 0), 0);
+    document.getElementById('columnTwo').value = column2Sum.toFixed(3);
+}
 
-      document.getElementById("mainBeamRight").value = " ";
-      document.getElementById("G1Right").value = " ";
-      document.getElementById("G2Right").value = " ";
-      document.getElementById("G3Right").value = " ";
-      document.getElementById("G4Right").value = " ";
-      document.getElementById("G5Right").value = " ";
-      document.getElementById("G6Right").value = " ";
-      document.getElementById("G7Right").value = " ";
-      document.getElementById("H1Right").value = " ";
-      document.getElementById("H2Right").value = " ";
-      document.getElementById("H3Right").value = " ";
-      document.getElementById("H4Right").value = " ";
+function calculateColumn3() {
+    const ids = measurements.map(m => m.diff);
+    column3Sum = ids.reduce((sum, id) => sum + (parseFloat(document.getElementById(id)?.value) || 0), 0);
+    document.getElementById('columnThree').value = column3Sum.toFixed(3);
+}
 
-      document.getElementById("mainBeamDif").value = " ";
-      document.getElementById("G1dif").value = " ";
-      document.getElementById("G2dif").value = " ";
-      document.getElementById("G3dif").value = " ";
-      document.getElementById("G4dif").value = " ";
-      document.getElementById("G5dif").value = " ";
-      document.getElementById("G6dif").value = " ";
-      document.getElementById("G7dif").value = " ";
-      document.getElementById("H1dif").value = " ";
-      document.getElementById("H2dif").value = " ";
-      document.getElementById("H3dif").value = " ";
-      document.getElementById("H4dif").value = " ";
-    }
+function calculateSubtotal() {
+    const spread = parseFloat(document.getElementById('spreadCredit').value) || 0;
+    subtotalSum = spread + column1Sum + column2Sum;
+    document.getElementById('subtotal').value = subtotalSum.toFixed(3);
+}
+
+function calculateFinal() {
+    finalSum = subtotalSum - column3Sum;
+    document.getElementById('finalScore').value = finalSum.toFixed(3);
+}
+
+function resetAll() {
+    document.querySelectorAll('input[type="number"]').forEach(input => input.value = '');
+    column1Sum = column2Sum = column3Sum = subtotalSum = finalSum = 0;
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    renderTable();
+    setupAutoDiff();
+    
+    document.getElementById('reset-btn').addEventListener('click', resetAll);
+});
